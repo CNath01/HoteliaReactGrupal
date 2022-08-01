@@ -12,7 +12,7 @@ The project **HOTELIA** is in development process, which generates several funct
 
 Commands needed to clone the repository: 
 
-`$ git clone https://github.com/CNath01/HoteliaReactG6.git`
+`$ git clone https://github.com/CNath01/HoteliaReactGrupal.git`
 
 ## Installation 
 Commands required for the repository:
