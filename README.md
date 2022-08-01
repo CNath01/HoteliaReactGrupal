@@ -1,8 +1,8 @@
-# Hotelia G6   
+# Hotelia G4   
 
 
 
-![](https://github.com/CNath01/HoteliaReactG6/blob/main/public/mockupp.png?raw=true)
+![](https://github.com/CNath01/HoteliaReactGrupal/blob/main/public/mockup.png?raw=true)
 
 -----------
 
@@ -36,12 +36,17 @@ Commands required for the repository:
  
 
 # Contributors 
-<p align="center"> <img width="280" height="100" src="https://github.com/CNath01/HoteliaReactG6/blob/main/public/natha.png?raw=true/200/300?style=centerme">  <img width="280" height="100" src="https://github.com/CNath01/HoteliaReactG6/blob/main/public/cam.png?raw=true"> </p>
+<p align="center"> <img width="280" height="100" src="">  <img width="280" height="100" src=""> </p>
 
 -------
+
+<p align="center">
+Sara Duque: https://github.com/luciaduque248  |  
+Carol Garcia: https://github.com/CADALASO </p>
 <p align="center">
 Nathalia Sarmiento: https://github.com/Nathillin  |  
 Camila Arciniegas: https://github.com/CNath01 </p>
+
 
 -------
 
