@@ -8,17 +8,8 @@ import { api } from '../utils/peticiones';
 import Swal from 'sweetalert2';
 
 function Modal({ habitacion, close }) {
-    const [dataModal, setDataModal] = useState({})
+    
 
-    const handleChangeModal = ({ target }) => {
-        setDataModal({
-            ...dataModal,
-            [target.name]: target.value
-        })
-    }
-
-    //agregamos otra constante al useState para actualizar el listado después de eliminar 
-    const [upList, setUpList] = useState([false]);
 
     const handleEdit = async(e) => {
         e.preventDefault();
@@ -28,16 +19,15 @@ function Modal({ habitacion, close }) {
 
             Swal.fire(
                 'Guardado!',
-                `El personaje <strong> ${habitacion.nombrehab}</strong> ha sido guardado exitosamente!`,
+                `La habitación <strong> ${habitacion.nombrehab} </strong> ha sido guardado exitosamente!`,
                 'success'
             )
             handleClose();
-            setUpList(!upList);
 
         } else {
             Swal.fire(
                 'Error!',
-                'Hubo un problema al registrar el personaje!',
+                'Hubo un problema al registrar la habitación!',
                 'error'
             )
         }
@@ -67,12 +57,12 @@ function Modal({ habitacion, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input  value={habitacion._id} onChange={handleChangeModal} name='_id' id='_id' className='no-hab-edit' type='number'/>
+                                        <input  value={habitacion._id} name='_id' id='_id' className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
                                         <label>Nombre de Habitación:</label>
-                                        <input  value={habitacion.nombrehab} onChange={handleChangeModal} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
+                                        <input  value={habitacion.nombrehab}name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
                                     </div>
                                 </div>
 
@@ -114,6 +104,16 @@ function Modal({ habitacion, close }) {
                                                 type='file' />
                                         </div>
                                     </div>
+                                </div>
+
+                                <div className='line4.5-habitacion-edit flex-form-edit'>
+                                    <label>Estado:</label>
+                                    <select name="estado" className='estado-form-list'>
+                                        <option value={habitacion.estado} className='estado-form-yes'>DISPONIBLE</option>
+                                        <option value={habitacion.estado} className='estado-form-no'>NO DISPONIBLE</option>
+                                        <option value={habitacion.estado} className='estado-form-upkeep'>EN MANTENIMIENTO</option>
+                                    </select>
+
                                 </div>
                                 <div className='line5-habitacion-edit'>
                                     <div className='flex-form-edit observaciones-edit'>

@@ -4,11 +4,14 @@ import { api } from '../utils/peticiones';
 import Nevera from '../assets/img/iconos/nevera.png'
 import Footer from '../components/Footer/Footer';
 import ModalEdit from '../Admin/Modal'
+import Admin_NavBar from '../components/Dashboards/Admin_NavBar'
 
 import '../assets/css/ListHabs.css';
 import Swal from 'sweetalert2';
+import Modal from '../Admin/Modal';
 
 function ListHabs() {
+
     const [habitaciones, setHabitaciones] = useState([]);
     useEffect(() => {
         axios(api).then(res => {
@@ -22,17 +25,24 @@ function ListHabs() {
     const [habitacion, setHabitacion] = useState({})
 
     
-    const apidelete = 'https://hoteliakuepa.herokuapp.com/habitaciones/id'
-
-    
     return (
         <div>
-            <div className='nav-bar-list'>Header</div>
+            <Admin_NavBar/>
 
             <div className='container-list-habs'>
                 <h1>HABITACIONES</h1>
 
                 <div className='cards-list-habs'>
+                {/* {
+                    habitaciones?.map((habitacion, index) => (
+                        <Modal
+                            key={index}
+                            habitaciones={habitacion}
+                            setUpList={setUpList}
+                            upList={upList}
+                            setHabitacion={setHabitacion} />
+                    ))
+                } */}
                     {
                         habitaciones?.map(habitacion => (
                             <div className='flex-list-habs' key={habitacion._id}>
@@ -44,12 +54,13 @@ function ListHabs() {
 
                                     <div className="button-card-inicio-list">
                                         <div className='disponible'>
-                                            <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button>
-                                            {/* <select name="estado">
-                                                <option value="value1">Value 1</option>
-                                                <option value="value2" selected>Value 2</option>
-                                                <option value="value3">Value 3</option>
-                                            </select> */}
+                                            {/* <button className="disponible-cards-list"><i className="fa-solid fa-circle"></i>DISPONIBLE</button> */}
+
+                                            <select name="estado" className="disponible-cards-list">
+                                                <option value={habitacion.estado}>DISPONIBLE</option>
+                                                <option value={habitacion.estado}>NO DISPONIBLE</option>
+                                                <option value={habitacion.estado}>EN MANTENIMIENTO</option>
+                                            </select>
                                         </div>
 
                                         <button
@@ -57,8 +68,9 @@ function ListHabs() {
                                                 setModal(true)
                                                 setHabitacion(habitacion)
                                                 console.log(habitacion)
+                                                
                                             }}
-                                            className="editar-cards-list">EDITAR
+                                            className="editar-cards-list"  >EDITAR
                                         </button>
                                         
                                 
