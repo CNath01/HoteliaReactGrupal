@@ -419,6 +419,33 @@ a{
     .descubre-galeria img{
         width: 72vw;
     }
+
+    .experiencias{
+        height: 50vh;
+        padding: 0 1rem;
+    }
+
+    .text-experiencias{
+        margin-left: 1rem;
+        height: 40vh;
+        width: 90vw;
+        background-size: cover;
+    }
+
+    .text-exp-description{
+        font-size: 15px;
+        padding: 0 3rem;
+    }
+
+    .slide-expe{
+        margin-left: -1rem;
+        width: 70vw;
+    }
+
+    .ubicacion img{
+        width: 80vw;
+        margin: 2rem 1rem;
+    }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
