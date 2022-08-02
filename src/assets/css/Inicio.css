@@ -550,21 +550,88 @@ a{
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    
-    .buscar-inicio{
-        height: 15vh;
-        width: 10px;
+    .section-banner{
+        height: 150vh;
+    }
+
+    .banner-inicio-1{
+     width: auto;
     }
     
-
+    .buscar-inicio{
+        display: flex;
+        justify-content: center;
+    }
+    
     .buscar-inicio form{
         flex-direction: column;
-        height:32vh;
+        height:45vh;
+        margin: -3rem 0;
+    }
+
+    .inputs input{
+        width: 70vw;
+    }
+
+    .inputs-habs{
+        margin-left: -4rem;
+    }
+
+    .habs-label label{
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .habs-flex .hab{
+        padding-left: 3rem;
+        width: 17vw;
+    }
+
+    .habs-flex .border-hab-1{
+        width: 18vw;
     }
 
     .banner-inicio-1{width: 100%;text-align: right;}
     .banner-inicio-1 h1{
         text-align: right;
         width: 70vw;
+    }
+
+    .descubre-hotelia{
+        height: 50vh;
+        width: auto;
+        padding: 7rem 3rem;
+    }
+
+    .descubre-galeria{
+        padding: 3rem;
+        width: 30vw;
+        height: 35vh;
+    }
+
+    .experiencias{
+        padding: 0 5rem;
+        justify-content: center;
+    } 
+        
+
+    .text-experiencias{
+        width: 70vw;
+    }
+
+    .slide-expe{
+        width: 60vw;
+    }
+
+    .ubicacion img{
+        width: 30vw;
+        height: 40vh;
+    }
+
+    .ubicacion{
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
