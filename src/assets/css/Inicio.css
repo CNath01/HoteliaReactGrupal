@@ -361,7 +361,6 @@ a{
     .banner-inicio-1 h4{
         text-align: center;
         font-size: 20px;
-
     }
 
     .fecha{
@@ -456,6 +455,98 @@ a{
     .line1-footer p{
         margin: 1rem 0;
     }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .section-banner{
+        padding: 0;
+        height: 160vh;
+    }
+    .banner-inicio-1{
+        width: 100vw;
+        align-items: center;
+    }
+    .banner-inicio-1 h1{
+        padding: 0;
+        width: auto;
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 50px;
+    }
+
+    .banner-inicio-1 h4{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .buscar-inicio form{
+        width: 50vw;
+        height: 70vh;
+        flex-direction: column;
+    }
+    .inputs-habs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .habs-label{
+        display: flex;
+        flex-direction: column;
+        margin-left: -2.8rem;
+    }
+
+    .habs-label .hab{
+        width: 42vw;
+    }
+
+    .habs-label label {
+        margin-right: 1rem;
+    }
+
+    .inputs input{
+        width: 50vw;
+    }
+
+    .descubre-hotelia{
+        width: auto;
+        flex-direction: column;
+        height: 150vh;
+        padding: 4rem 5rem;
+    }
+
+    .descubre{
+        width: auto;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0rem;
+    }
+
+    .descubre h1{
+        line-height: 50px;
+        text-align: center;
+    }
+
+    .descubre p{
+        width: 70vw;
+        text-align: center;
+    }
+
+    .descubre-galeria{
+        height: 35vh;
+        width: 72vw;
+        padding: 1rem 0rem;
+        margin: 2rem -1rem;
+    }
+
+    .descubre-galeria img{
+        width: 92vw;
+        margin: 0 1rem;
+    }
+
+    .imgs{
+        margin: 0 10rem;
+    }
+
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
