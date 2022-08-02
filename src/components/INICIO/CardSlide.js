@@ -100,18 +100,15 @@ function CardSlide() {
                             <div className="card">
                                 {/*  ---------- CARD PARTE delantera ---------- */}
                                 <div className="card__1">
-
                                     <div className="content__1">
                                         <div className="cards" id='habitacion'>
-                                            <div className="card__1 contenido-card">
+                                            <div className=" contenido-card">
                                                 <h1>{habitaciones.nombrehab}</h1>
                                                 <p>{habitaciones.descripcion}</p>
                                                 <h2>{habitaciones.valornoche} COP / NOCHE</h2>
                                             </div>
                                         </div>
                                     </div>
-
-                                    
                                 </div>
 
 
