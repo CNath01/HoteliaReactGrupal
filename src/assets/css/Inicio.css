@@ -446,6 +446,16 @@ a{
         width: 80vw;
         margin: 2rem 1rem;
     }
+
+    .line1-footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .line1-footer p{
+        margin: 0.5rem 0;
+    }
 }
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {

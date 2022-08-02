@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <div>
-      <section className='panoramica'></section>
+      <section className='panoramica'/>
       <footer className='footer'>
         <div className='line1-footer'>
             <p>TÉRMINOS Y CONDICIONES</p>   
