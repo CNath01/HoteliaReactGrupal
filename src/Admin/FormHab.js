@@ -6,7 +6,7 @@ import Swal from 'sweetalert2'
 import '../assets/css/FormHab.css'
 import Footer from '../components/Footer/Footer'
 import Nevera from '../assets/img/iconos/nevera.png'
-import Admin_NavBar from '../components/Dashboards/Admin_NavBar'
+import Admin_NavBar from '../components/Dashboards/AdminNavBar'
 
 function FormHab() {
     const history = useNavigate();

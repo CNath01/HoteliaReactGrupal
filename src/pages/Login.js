@@ -85,7 +85,7 @@ const Login = () => {
                         </div>
 
                         <div className='registrate'>
-                            <Link to=''>¿No tienes una cuenta? Regístrate</Link>
+                            <Link to='/Hotelia/Formulario/Registro'>¿No tienes una cuenta? Regístrate</Link>
                         </div>
 
                         <div className='botones-login'>
