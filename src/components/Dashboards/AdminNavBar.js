@@ -28,9 +28,9 @@ function AdminNavBar() {
         </div>
       </div>
       <div className="items">
-        <Link to="/Hotelia/Admin/list-habitaciones" className="item"><i class="fa-solid fa-bed"></i> HABITACIONES</Link>
+        <Link to="/Hotelia/list-habitaciones" className="item"><i class="fa-solid fa-bed"></i> HABITACIONES</Link>
         <hr className="line-nav" />
-        <Link to="/Hotelia/Admin/form-habitaciones" className="item"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓN</Link>
+        <Link to="/Hotelia/form-habitaciones" className="item"><i class="fa-solid fa-circle-plus"></i> CREAR HABITACIÓN</Link>
         <hr className="line-nav" />
         <Link to="/Hotelia/Admin/Perfil" className="item"><i class="fa-solid fa-user-pen"></i> MI PERFIL</Link>
       </div>
