@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/HoteliaReactGrupal/static/css/main.a7201e2f.css",
+    "main.js": "/HoteliaReactGrupal/static/js/main.697f73bc.js",
+    "static/media/experienciaFONDO.png": "/HoteliaReactGrupal/static/media/experienciaFONDO.fd1fb12298b5ccf93e24.png",
+    "static/media/login.png": "/HoteliaReactGrupal/static/media/login.c16ffff1029592742ae9.png",
+    "static/media/hotel-1.png": "/HoteliaReactGrupal/static/media/hotel-1.78b3a83e759f9016fbed.png",
+    "static/media/footerBOG.png": "/HoteliaReactGrupal/static/media/footerBOG.2ed5a120b36a6de6fc1e.png",
+    "static/media/descubreHL1.png": "/HoteliaReactGrupal/static/media/descubreHL1.8c1c48f05ca1d9cf397a.png",
+    "static/media/descubreHL3.png": "/HoteliaReactGrupal/static/media/descubreHL3.cd6a4afbd24764b3cbad.png",
+    "static/media/descubreHL2.png": "/HoteliaReactGrupal/static/media/descubreHL2.bc42e999ab6dd33c844f.png",
+    "static/media/mapa.png": "/HoteliaReactGrupal/static/media/mapa.96c74304f545efebbb18.png",
+    "static/media/price.png": "/HoteliaReactGrupal/static/media/price.6a697197b557a95bbe90.png",
+    "static/media/experiencias.png": "/HoteliaReactGrupal/static/media/experiencias.6a6c680b19bd0fc8c31a.png",
+    "static/media/slick.svg": "/HoteliaReactGrupal/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/HoteliaReactGrupal/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/HoteliaReactGrupal/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/HoteliaReactGrupal/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/HoteliaReactGrupal/index.html",
+    "main.a7201e2f.css.map": "/HoteliaReactGrupal/static/css/main.a7201e2f.css.map",
+    "main.697f73bc.js.map": "/HoteliaReactGrupal/static/js/main.697f73bc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a7201e2f.css",
+    "static/js/main.697f73bc.js"
+  ]
+}
