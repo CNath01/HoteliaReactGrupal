@@ -1,15 +1,13 @@
 import React, { useState } from 'react'
-import { Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Swal from 'sweetalert2'
 
 import '../assets/css/FormHab.css'
 import Footer from '../components/Footer/Footer'
 import Nevera from '../assets/img/iconos/nevera.png'
-import Admin_NavBar from '../components/Dashboards/AdminNavBar'
+import AdminNavBar from '../components/Dashboards/AdminNavBar'
 
 function FormHab() {
-    const history = useNavigate();
 
     /*1.Inicializamos los inputs en el estado, para poder recibir los valores que se digiten 
     en él y controlarlos */
@@ -69,7 +67,7 @@ function FormHab() {
 
     return (
         <div>
-            <Admin_NavBar/>
+            <AdminNavBar/>
             {/* <div className='nav-bar-list'>Header</div> */}
 
             <div className='container-form-habs'>

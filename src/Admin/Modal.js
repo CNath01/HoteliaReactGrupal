@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import Nevera from '../assets/img/iconos/nevera.png'
 import Cerrar from '../assets/img/iconos/CERRAR.png'
