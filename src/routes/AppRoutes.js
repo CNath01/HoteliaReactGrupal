@@ -11,7 +11,7 @@ function AppRoutes() {
   return (
     <BrowserRouter>
         <Routes>
-            <Route path='/Hotelia/' element={<Inicio/>} ></Route>
+            <Route path='/' element={<Inicio/>} ></Route>
 
 
             <Route path='/Hotelia/list-habitaciones' element={<ListHabs/>} ></Route>
