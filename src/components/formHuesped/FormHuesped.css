@@ -1,0 +1,43 @@
+.contact-P{
+    background: url(../assets/img/formFond.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.logHotelia{
+    width: 30vh;
+}
+
+.formAll{
+    max-width: 50vw;
+    background: rgba(51, 51, 51, 0.8);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    color: var(--colortext);
+    line-height: 1rem;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid #fff;
+}
+
+/* select {
+    width: 100%;
+    background: rgba(111,159,167,0.33);
+    border-radius: 3px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px 0 10px;
+    -webkit-transition: .3s ease all;
+    transition: .3s ease all;
+    border: none;
+    border: 3px solid transparent;
+} */
+
+label{
+    display: block;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.58);
+	padding: 10px;
+	min-height: 40px;
+	cursor: pointer;
+}

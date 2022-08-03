@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap');
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+.TPerfil{
+    background: url(../assets/img/fondo-Perfil.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 70vw;
+}
+
+:root{
+    --naranjacolor: #FF820D;
+    --colortext: #2D2B2B;
+    --verdcolor: #157A8A;
+    --fontgrey: rgba(255, 255, 255, 0.5);
+}
+
+.Perfil-all{
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr  2fr;
+}
+
+.Perfilimg{
+    background-color: var(--verdcolor);
+    border-radius: 10px 0px 0px 10px;
+}
+
+.pfoto{
+    height: 10%;
+    width: 50vh;
+    border-radius:30vh;
+    filter: drop-shadow( 5px 5px 2px var(--naranjacolor));
+}
+
+.Perfildatos{
+background: var(--fontgrey);
+border-radius: 0px 10px 10px 0px;
+}
+
+.usuario{
+    grid-area: usuario;
+}
+
+.line{
+    grid-area: line;
+}
+
+.datosUs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.Perfildatos{
+    padding: 3vw;
+}
+
+h1{
+    font-family: 'Alata', sans-serif;
+    color: var(--naranjacolor);
+    text-align: center;
+    font-size: 4vw;
+    text-shadow: 2px 2px 2px var(--colortext);
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+h3{
+    /* font-family: 'Bebas Neue', cursive; */
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.line{
+    margin-top: -1vw;
+    margin-bottom: 1vw;
+    height: 2px;
+    width: 50%;
+    background-color: var(--naranjacolor);
+}
+
+.boton{
+    width: 30%;
+    height: 2vw;
+    margin: 1vh auto;
+    display: block;
+    background-color: var(--naranjacolor);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.Subtx{
+    font-size: 10px;
+    font-weight: 400;
+    margin-left: 20px;
+}
