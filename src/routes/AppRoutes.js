@@ -14,9 +14,9 @@ function AppRoutes() {
             <Route path='/' element={<Inicio/>} ></Route>
 
 
-            <Route path='/Hotelia/list-habitaciones' element={<ListHabs/>} ></Route>
-            <Route path='/Hotelia/form-habitaciones' element={<FormHab/>} ></Route>
-            <Route path='/Hotelia/login' element={<Login/>} ></Route>
+            <Route path='/HoteliaReactGrupal/list-habitaciones' element={<ListHabs/>} ></Route>
+            <Route path='/HoteliaReactGrupal/form-habitaciones' element={<FormHab/>} ></Route>
+            <Route path='/HoteliaReactGrupal/login' element={<Login/>} ></Route>
         </Routes>
     </BrowserRouter>
   )
