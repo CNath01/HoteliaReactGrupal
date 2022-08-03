@@ -8,15 +8,11 @@ import { api } from '../utils/peticiones';
 import Swal from 'sweetalert2';
 
 function Modal({ habitacion, close }) {
-    
-
-
     const handleEdit = async(e) => {
         e.preventDefault();
         const response = await axios.put(`${api}/${habitacion._id}`, habitacion);//await espera hasta que se ejcute la petición
         console.log(response);
         if (response.status === 200) {
-
             Swal.fire(
                 'Guardado!',
                 `La habitación <strong> ${habitacion.nombrehab} </strong> ha sido guardado exitosamente!`,
@@ -31,8 +27,6 @@ function Modal({ habitacion, close }) {
                 'error'
             )
         }
-
-        
     }
 
     const handleClose = () => {
@@ -57,12 +51,12 @@ function Modal({ habitacion, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input  name='_id' id='_id' className='no-hab-edit' type='number'/>
+                                        <input  name='_id' id='_id' value={habitacion._id} className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
                                         <label>Nombre de Habitación:</label>
-                                        <input  value={habitacion.nombrehab}name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
+                                        <input  value={habitacion.nombrehab} name='nombrehab' id='nombrehab' className='nombre-hab-edit' type='text'/>
                                     </div>
                                 </div>
 
