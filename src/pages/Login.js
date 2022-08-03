@@ -53,7 +53,7 @@ const Login = () => {
                 }}>
 
                 {({ values, errors, touched, handleSubmit, handleChange, handleBlur }) => (
-                    <form action='/VirtuosaCrud/admin' className='formulario-login' onSubmit={handleSubmit}>
+                    <form action='/Hotelia/Admin/Dashboard' className='formulario-login' onSubmit={handleSubmit}>
                         <img src={Logo} alt="logo" />
                         <h1>Inicia sesión</h1>
                         <p>Por favor, diligencie la siguiente información:</p>
@@ -100,7 +100,7 @@ const Login = () => {
             </Formik>
 
             <div className='volver-login'>
-                <button><Link to="/Hotelia/"><i className="fa-solid fa-house"></i></Link></button>
+                <button><Link to="/"><i className="fa-solid fa-house"></i></Link></button>
             </div>
         </div>
     );
