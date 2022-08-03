@@ -268,5 +268,37 @@
     border-radius: 4px;
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .cards-list-habs {
+        grid-template-columns: 1fr;
+        grid-template-rows: 120vh 120vh 120vh 120vh 120vh 120vh auto;
+        grid-template-areas:
+        "container-list"  
+        "container-list"
+        "container-list"
+        "container-list"
+        "container-list"
+        "container-list";
+    }
 
+    .card__1-list{
+        width: 65vw;
+        height: 90vh;
+        left: -4rem;
+        
+    }
+
+    .card__1-list h1{
+        text-align: center;
+    }
+
+    .card-list{
+        background-color: red;
+    }
+
+    .button-card-inicio-list{
+        display: flex;
+        flex-direction: column;
+    }
+}
 

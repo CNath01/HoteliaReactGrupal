@@ -68,12 +68,9 @@ function ListHabs() {
                                                 setModal(true)
                                                 setHabitacion(habitacion)
                                                 console.log(habitacion)
-                                                
                                             }}
                                             className="editar-cards-list"  >EDITAR
                                         </button>
-                                        
-                                
                                     </div>
 
                                     <div className="card-list">

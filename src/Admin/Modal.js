@@ -57,7 +57,7 @@ function Modal({ habitacion, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input  value={habitacion._id} name='_id' id='_id' className='no-hab-edit' type='number'/>
+                                        <input  name='_id' id='_id' className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>
