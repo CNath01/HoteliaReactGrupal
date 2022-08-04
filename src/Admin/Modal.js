@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import Nevera from '../assets/img/iconos/nevera.png'
 import Cerrar from '../assets/img/iconos/CERRAR.png'
@@ -8,9 +8,10 @@ import { api } from '../utils/peticiones';
 import Swal from 'sweetalert2';
 
 function Modal({ habitacion, close }) {
+    
     const handleEdit = async(e) => {
         e.preventDefault();
-        const response = await axios.put(`${api}/${habitacion._id}`, habitacion);//await espera hasta que se ejcute la petición
+        const response = await axios.put(`${api}/${habitacion._id}`, room);//await espera hasta que se ejcute la petición
         console.log(response);
         if (response.status === 200) {
             Swal.fire(
@@ -33,6 +34,12 @@ function Modal({ habitacion, close }) {
         close(false)
     }
 
+    const [room, setRoom] = useState(habitacion)
+
+    const handleValues = (event) => {
+        setRoom({...room,[event.target.name]:event.target.value})
+    }
+
     return (
         <div>
 
@@ -51,7 +58,7 @@ function Modal({ habitacion, close }) {
                                 <div className='line1-habitacion-edit'>
                                     <div className='flex-form-edit  '>
                                         <label>No. de Hab:</label>
-                                        <input  name='_id' id='_id' value={habitacion._id} className='no-hab-edit' type='number'/>
+                                        <input  name='_id' id='_id' value={room._id} onChange={handleValues} className='no-hab-edit' type='number'/>
                                     </div>
 
                                     <div className='flex-form-edit'>

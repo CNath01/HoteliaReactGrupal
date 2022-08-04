@@ -1,0 +1,29 @@
+.titulo{
+    color: blue;
+    text-align: center;
+    margin: 0;
+}
+
+form{
+    margin: 1rem auto;
+    padding: 0 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    margin: .5rem;
+    font-weight: bold;
+}
+
+input, select, button{
+    padding: .3rem;
+}
+
+button{
+    background-color: black;
+    margin: 1rem 0;
+    color: blanchedalmond;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
