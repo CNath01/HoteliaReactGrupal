@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+}
+
+.body-login{
+    background-image: url(../img/fontL.png);
+    height: 160vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-login{
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+}
+
+.info-login h1{
+    margin: 9px;
+    color: #fff;
+}
+
+.ttext{
+    font-size: 19px;
+    color: #fff;
+    font-family: 'Akrobat';
+}
+
+.tbienb{
+    padding: 3vh;
+}
+
+.login{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-data{
+    text-align: center;
+    margin-top: 30vh;
+    background: rgba(51, 51, 51, 0.83);
+    border-radius: 20px;
+    padding: 3vh;
+    width: 80%;
+}
+
+.btn-login {
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: #fff;
+    color: #333;
+    padding:10px;
+    margin-top: 40px;
+    border: none;
+}
+
+.btn-login:hover {
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-grup-login{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+/* @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .btn-grup-login{
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+} */
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .body-login{
+        height: 100vh;
+        flex-direction: row;
+    }
+
+    .login-data{
+        margin-top: 6vh
+    }
+
+    .login-data img{
+        width: 80%;
+    }
+
+    .info-login{
+        margin: 30vh 3vh;
+    }
+    
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1400px) {
+    .body-login{
+        height: 100vh;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .login-data{
+        margin-top: 5vh;
+        margin-right: 3vh;
+        padding: 3vh;
+        width: 100%;
+    }
+
+    .info-login{
+        margin: 30vh 7vh;
+    }
+}

@@ -1,0 +1,79 @@
+{
+  "users": [
+    {
+      "tipodoc": "Cédula de ciudadanía",
+      "numdoc": "1234567893",
+      "nombre": "Ana",
+      "apellido": "Murillo",
+      "fnacimiento": "2022-08-08",
+      "genero": "Femenino",
+      "email": "ana@mail.com",
+      "telefono": "3109387987",
+      "paisorigen": "Colombia",
+      "password": "Prueba1",
+      "tipouser": "Huésped",
+      "img": "https://images.unsplash.com/photo-1588516903720-8ceb67f9ef84?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=444&q=80",
+      "id": 1
+    },
+    {
+      "tipodoc": "Cédula de ciudadanía",
+      "numdoc": "1234567890",
+      "nombre": "Pepito",
+      "apellido": "Perez",
+      "fnacimiento": "2022-08-05",
+      "genero": "Masculino",
+      "email": "pepito@mail.com",
+      "telefono": "3169875698",
+      "paisorigen": "Colombia",
+      "password": "Prueba126*",
+      "tipouser": "Huésped",
+      "img": "",
+      "id": 2
+    },
+    {
+      "tipodoc": "Cédula de ciudadanía",
+      "numdoc": "1234567895",
+      "nombre": "Sabin",
+      "apellido": "Lopez",
+      "fnacimiento": "2022-08-04",
+      "genero": "Femenino",
+      "email": "sabin@mail.com",
+      "telefono": "3178965896",
+      "paisorigen": "Colombia",
+      "password": "Prueba127*",
+      "tipouser": "Huésped",
+      "img": "",
+      "id": 3
+    },
+    {
+      "tipodoc": "Cédula de ciudadanía",
+      "numdoc": "1234567893",
+      "nombre": "Ana",
+      "apellido": "Murillo",
+      "fnacimiento": "2022-08-08",
+      "genero": "Femenino",
+      "email": "ana@mail.com",
+      "telefono": "3109387987",
+      "paisorigen": "Colombia",
+      "password": "Prueba1",
+      "tipouser": "Huésped",
+      "img": "",
+      "id": 4
+    },
+    {
+      "tipodoc": "Cédula de ciudadanía",
+      "numdoc": "1234567890",
+      "nombre": "Mario Alberto Kenpes",
+      "apellido": "Murillo",
+      "fnacimiento": "Yepes Caicedo",
+      "genero": "Masaculino",
+      "email": "marioyepes@gmail.com",
+      "telefono": "marioyepes@gmail.com",
+      "paisorigen": "Colombia",
+      "password": "Prueba1",
+      "tipouser": "Administrador",
+      "img": "",
+      "id": 5
+    }
+  ]
+}

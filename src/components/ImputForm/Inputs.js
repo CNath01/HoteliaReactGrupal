@@ -1,5 +1,9 @@
 import React from 'react';
-import {Select, Input, Label, GrupoInput, LeyendaError, IconoValidacion} from './../../formHuesped/Formulario';
+import {Input, 
+	Label, 
+	GrupoInput, 
+	LeyendaError, 
+	IconoValidacion} from '../FormPerfil/Formularios';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name, leyendaError, expresionRegular, funcion}) => {
@@ -35,16 +39,6 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 					onBlur={validacion}
 					valido={estado.valido}
 				/>
-				<Select 
-					type={tipo}
-					
-					id={name}
-					value={estado.campo}
-					onChange={onChange}
-					onKeyUp={validacion}
-					onBlur={validacion}
-					valido={estado.valido}
-				/>
 				<IconoValidacion 
 					icon={estado.valido === 'true' ? faCheckCircle : faTimesCircle}
 					valido={estado.valido}
@@ -54,5 +48,5 @@ const ComponenteInput = ({estado, cambiarEstado, tipo, label, placeholder, name,
 		</div>
 	);
 }
-
+ 
 export default ComponenteInput;

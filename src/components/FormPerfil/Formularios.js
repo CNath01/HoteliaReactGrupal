@@ -4,12 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const colores = {
 	borde: "#fff",
 	error: "#ff0000",
-	exito: "#FF820D"
+	exito: "#fff",
 }
 
 const Formulario = styled.form`
-    // background: rgba(255, 255, 255, 0.8);
-    padding: 2em;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
@@ -20,9 +18,10 @@ const Formulario = styled.form`
 
 const Label = styled.label`
 	display: block;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
-	color: #ffff;
-	padding: 10px;
+	padding: 3vh 0 0;
 	min-height: 40px;
 	cursor: pointer;
 	${props => props.valido === 'false' && css`
@@ -33,20 +32,17 @@ const Label = styled.label`
 const GrupoInput = styled.div`
 	position: relative;
 	z-index: 90;
-	border-radius: 3px;
-	border: 1px solid #fff;
 `;
 
 const Input = styled.input`
 	width: 100%;
-	background: none;
-	border-radius: 3px;
+	background: none;	
 	height: 45px;
 	line-height: 45px;
 	padding: 0 40px 0 10px;
 	transition: .3s ease all;
-	
-	border: 3px solid transparent;
+	border: none;
+	border-bottom: 2px solid #fff;
 	&:focus {
 		border: 3px solid ${colores.borde};
 		outline: none;
@@ -54,14 +50,16 @@ const Input = styled.input`
 	}
 	${props => props.valido === 'true' && css`
 		border: 3px solid transparent;
+		color: ${colores.exito};
 	`}
 	${props => props.valido === 'false' && css`
 		border: 3px solid ${colores.error} !important;
+		color: ${colores.error};
 	`}
-`;
-
-const Select = styled.select`
-	
+	@media (min-width: 100px) and (max-width: 1400px) {
+		width: 70%;
+		margin: 0 auto;
+	}
 `;
 
 const LeyendaError = styled.p`
@@ -84,6 +82,10 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 	z-index: 100;
 	font-size: 16px;
 	opacity: 0;
+	/*Resolución de tablet*/
+	@media screen and (min-width: 768px) {
+		right: 20px;
+	}
 	${props => props.valido === 'false' && css`
 		opacity: 1;
 		color: ${colores.error};
@@ -92,6 +94,9 @@ const IconoValidacion = styled(FontAwesomeIcon)`
 		opacity: 1;
 		color: ${colores.exito};
 	`}
+	@media (min-width: 100px) and (max-width: 767px) {
+		right: 40px;
+	}
 `;
 
 const ContenedorTerminos = styled.div`
@@ -118,8 +123,8 @@ const Boton = styled.button`
 	height: 45px;
 	line-height: 45px;
 	width: 30%;
-	background: #fff;
-	color: #333;
+	background: #337AB7;
+	color: #fff;
 	font-weight: bold;
 	border: none;
 	border-radius: 3px;
@@ -136,17 +141,20 @@ const MensajeExito = styled.p`
 `;
 
 const MensajeError = styled.div`
-	height: 45px;
-	line-height: 45px;
-	background: var(--naranjacolor);
+	line-height: 15px;
+	background-color:red;
+	border: 1px solid ${colores.error};
 	padding: 0px 15px;
 	border-radius: 3px;
 	grid-column: span 2;
+	margin: 1rem;
 	p {
-		margin: 0;
+		color: white;
+		margin: 1rem;
 	} 
 	b {
 		margin-left: 10px;
+		line-height: 25px;
 	}
 `;
 
@@ -155,7 +163,6 @@ export {
 	Label,
 	GrupoInput,
 	Input,
-	Select,
 	LeyendaError,
 	IconoValidacion,
 	ContenedorTerminos,

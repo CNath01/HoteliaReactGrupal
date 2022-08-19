@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Container, Form, Modal} from 'react-bootstrap';
-import HuesPerf from './HuespPerf';
+import TableDoramas from './TableDoramas';
 import Swal from 'sweetalert2';
 // import '../../components/elementos/Formulario.css';
 
-function Cperfil(){
+function LisDoramas(){
 
     // 1. definir el url al api al que me voy a conectar 
-    const url ="https://hoteliakuepa.herokuapp.com/users/id";
+    const url="http://localhost:4000/users";
     // 2. generar funcion asincrona
     const getData=async()=>{
         const response=axios.get(url);
@@ -32,12 +32,12 @@ function Cperfil(){
 
     const handleSubmit=async(e)=>{
             e.preventDefault();
-            const response=await axios.put(`${url}/${dataModal._id}`,dataModal);
+            const response=await axios.put(`${url}/${dataModal.id}`,dataModal);
             console.log(response);  
             if(response.status===200){
                 Swal.fire(
                     'Cambios guardados!',
-                    `<strong> ${response.data.nombre}</strong> sus datos ha sido actualizados exitosamente!`,
+                    `El dorama <strong> ${response.data.nombre}</strong> ha sido actualizado exitosamente!`,
                     'success'
                 )
                 handleClose();
@@ -46,12 +46,13 @@ function Cperfil(){
             } else {
                 Swal.fire(
                     'Error!',
-                    'Hubo un problema al actualizar sus datos!',
+                    'Hubo un problema al actualizar el estudiante!',
                     'error'
                 )
             }
         }
         
+
     // 4. sirve para ejecutar funciones desde el renderizado o cada vez que se renderiza un componente
     useEffect(()=>{
         getData().then((response)=>{
@@ -76,9 +77,9 @@ function Cperfil(){
                 <tbody>
                 {
                     list.map((dor,index)=>(                       
-                        <HuesPerf
+                        <TableDoramas
                         Key={index}
-                        perfil={dor}
+                        doramas={dor}
                         setUpist={setUpList}
                         upList={upList}
                         handleOpen={handleOpen}
@@ -94,7 +95,7 @@ function Cperfil(){
 
                     <Modal.Header closeButton>
                         <Modal.Title>
-                            Editar perfil
+                            Editar Estudiante
                         </Modal.Title>
                         </Modal.Header>
                         <Form onSubmit={handleSubmit}>
@@ -104,46 +105,79 @@ function Cperfil(){
                                 <Form.Label>Nombre</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    placeholder="Ingrese su nombre completo"
+                                    placeholder="Ingrese el nombre del Dorama en español o ingles"
                                     name="nombre"
-                                    value={dataModal.nombre}
+                                    value={dataModal.perfil}
                                     onChange={handleChangeModal}/>
                             </Form.Group>
 
-                            <Form.Group>
-                                <Form.Label>Apellido</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Ingrese su apeliido completo"
-                                    name="apellido"
-                                    value={dataModal.apellido}
-                                    onChange={handleChangeModal}/>
+                            <Form.Group aria-label="genero">
+                                <Form.Label>Género</Form.Label><br/>
+                                <Form.Check
+                                        inline
+                                        label="Drama"
+                                        name="genero1"
+                                        value="Drama"
+                                        onChange={handleChangeModal}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="Romance"
+                                        name="genero2"
+                                        value="Romance"
+                                        onChange={handleChangeModal}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="Comedia"
+                                        name="genero3"
+                                        value="Comedia"
+                                        onChange={handleChangeModal}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="Negocios"
+                                        name="genero4"
+                                        value="Negocios"
+                                        onChange={handleChangeModal}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="Acción"
+                                        name="genero5"
+                                        value="Acción"
+                                        onChange={handleChangeModal}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="Aventuras"
+                                        name="genero6"
+                                        value="Aventuras"
+                                        onChange={handleChangeModal}
+                                    />
+                                    <Form.Check
+                                        inline
+                                        label="Fantasía"
+                                        name="genero7"
+                                        value="Fantasía"
+                                        onChange={handleChangeModal}
+                                    />
                             </Form.Group>
 
-                            <Form.Group>
-                                <Form.Label>N° de documento</Form.Label>
-                                <Form.Control
-                                    type="text"
-                                    placeholder="Ingrese su documento puede contener numeros y letras"
-                                    name="documento"
-                                    value={dataModal._id}
-                                    onChange={handleChangeModal}/>
-                            </Form.Group>
-
-                            <Form.Group aria-label="tipodoc">
-                                <Form.Label>Tipo de documento</Form.Label>
+                            <Form.Group aria-label="estado">
+                                <Form.Label>Estado</Form.Label>
                                 <Form.Select
-                                    name="tipodoc"
-                                    value={dataModal.tipodoc}
+                                    name="estado"
+                                    value={dataModal.estado}
                                     onChange={handleChangeModal}>
-                                    <option value="selec">Seleccione un tipo de documento</option>
-                                    <option value="cc">Cedula de ciudadania</option>
-                                    <option value="ce">Cedula de extranjeria</option>
-                                    <option value="ps">Pasaporte</option>
+                                    <option>Seleccione en que estado se encuentra el Dorama</option>
+                                    <option value="Finalizado">Finalizado</option>
+                                    <option value="En emisión">En emisión</option>
+                                    <option value="Estreno">Próximos estrenos</option>
                                 </Form.Select>
                             </Form.Group>
 
-                            {/* <Form.Group aria-label="capitulos">
+                            <Form.Group aria-label="capitulos">
                                 <Form.Label>Capitulos</Form.Label>
                                 <Form.Select
                                     name="capitulos"
@@ -155,53 +189,19 @@ function Cperfil(){
                                     <option capitulos="12">12</option>
                                     <option capitulos="16">16</option>
                                 </Form.Select>
-                            </Form.Group> */}
-
-                            <Form.Group>
-                                <Form.Label>Fecha de nacimiento</Form.Label>
-                                <Form.Control
-                                    type="date"
-                                    placeholder="Ingrese su fecha de nacimiento"
-                                    name="fnacimiento"
-                                    value={dataModal.fnacimiento}
-                                    onChange={handleChangeModal} />
                             </Form.Group>
 
-                            <Form.Group aria-label="genero">
-                                <Form.Label>Genero</Form.Label>
-                                <Form.Select
-                                    name="genero"
-                                    value={dataModal.genero}
-                                    onChange={handleChangeModal}>
-                                    <option value="selec">Seleccione su genero</option>
-                                    <option value="hom">Masculino</option>
-                                    <option value="muj">Femenino</option>
-                                    <option value="sinG">Sin genero</option>
-                                    <option value="NoRs">Prefiero no responder</option>
-                                </Form.Select>
+                            <Form.Group>
+                                <Form.Label>Fecha de emisión</Form.Label>
+                                <Form.Control
+                                    type="date"
+                                    placeholder="Ingrese la fecha de emisión"
+                                    name="anio"
+                                    value={dataModal.anio}
+                                    onChange={handleChangeModal} />
                             </Form.Group>
                             
                             <Form.Group>
-                                <Form.Label>Correo</Form.Label>
-                                <Form.Control
-                                    type="email"
-                                    placeholder="Ingrese su correo electrónico"
-                                    name="email"
-                                    value={dataModal.email}
-                                    onChange={handleChangeModal} />
-                            </Form.Group>
-
-                            <Form.Group>
-                                <Form.Label>Teléfonon</Form.Label>
-                                <Form.Control
-                                    type="number"
-                                    placeholder="Ingrese su numero de contacto"
-                                    name="telefono"
-                                    value={dataModal.telefono}
-                                    onChange={handleChangeModal} />
-                            </Form.Group>
-
-                            {/* <Form.Group>
                                 <Form.Label>Foto</Form.Label>
                                 <Form.Control 
                                 type="text" 
@@ -209,7 +209,17 @@ function Cperfil(){
                                 name="foto" 
                                 value={dataModal.foto}
                                 onChange={handleChangeModal}/> 
-                            </Form.Group> */}
+                            </Form.Group>
+
+                            <Form.Group>
+                                <Form.Label>Sinopsis del Dorama</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    placeholder="Escriba aquí una pequeña sinopsis"
+                                    name="sinopsis"
+                                    value={dataModal.sinopsis}
+                                    onChange={handleChangeModal} />
+                            </Form.Group>
 
                         </Modal.Body>
                         <Modal.Footer>
@@ -222,4 +232,4 @@ function Cperfil(){
     );
 }
 
-export default Cperfil;
+export default LisDoramas;
